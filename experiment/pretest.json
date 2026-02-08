@@ -2,37 +2,71 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Hertzian contact theory assumes the deformation during contact is:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Plastic",
+        "b": "Elastic",
+        "c": "Creep",
+        "d": "Viscous"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect: Hertzian theory does not describe plastic deformation.",
+        "b": "Correct: Hertzian theory assumes purely elastic, fully recoverable deformation.",
+        "c": "Incorrect: Creep is time-dependent deformation, not assumed in Hertzian theory.",
+        "d": "Incorrect: Viscous deformation is not considered in Hertzian elastic contact."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The contact area between an indenter and a surface increases with:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Lower load",
+        "b": "Higher modulus",
+        "c": "Higher load",
+        "d": "Lower indenter radius"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect: Lower load reduces penetration and contact area.",
+        "b": "Incorrect: Higher modulus reduces deformation, often decreasing contact area.",
+        "c": "Correct: Increasing load pushes the indenter deeper, increasing the contact radius and area.",
+        "d": "Incorrect: A smaller indenter radius produces smaller contact area for the same load."
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In Hertzian contact, the maximum shear stress occurs:",
+      "answers": {
+        "a": "At the edge of contact",
+        "b": "At the center of contact",
+        "c": "Below the surface",
+        "d": "Uniformly everywhere"
+      },
+      "explanations": {
+        "a": "Incorrect: Stresses are not maximum at the edge.",
+        "b": "Incorrect: Normal stress is highest at the center, but shear stress is not.",
+        "c": "Correct: Peak shear stress occurs slightly below the surface, often initiating subsurface cracks or yielding.",
+        "d": "Incorrect: Stress distribution is highly non-uniform in contact mechanics."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the contact radius becomes smaller for the same load, the contact pressure will:",
+      "answers": {
+        "a": "Decrease",
+        "b": "Increase",
+        "c": "Remain constant",
+        "d": "Become zero"
+      },
+      "explanations": {
+        "a": "Incorrect: Smaller area does not reduce pressure.",
+        "b": "Correct: Pressure = Load / Area. Smaller area increases contact stress.",
+        "c": "Incorrect: Pressure depends on area and will change.",
+        "d": "Incorrect: Pressure cannot be zero under applied load."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
