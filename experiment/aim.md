@@ -1,1 +1,1 @@
-### Aim of the experiment
+### To estimate the mean and maximum Hertzian contact pressures developed during nanoindentation by determining the contact radius and contact area from load–displacement data, and to understand how localized stresses influence elastic deformation, yielding, and wear initiation.
