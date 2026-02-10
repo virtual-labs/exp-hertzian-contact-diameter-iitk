@@ -107,6 +107,7 @@ function display2d() {
 
     // Hide SVG machine
     document.querySelector(".innersvg").style.display = "none";
+    document.getElementById("legendBox").style.display = "block";
 
     const holder = document.getElementById("pngHolder");
 
@@ -175,6 +176,11 @@ document.addEventListener("transitionend", (e) => {
 function touchEvent() {
     baseImg.src = BASE_TOUCH;
     indenter.style.transform = "translateX(-50%) translateY(110px)";
+
+    // 🎯 Start graph here at REAL contact moment
+    document.getElementById("graphBox").style.display = "block";
+    initGraph();
+    startGraphEngineAtContact();
 }
 
 /************************************************************
@@ -184,7 +190,10 @@ function compressionEvent() {
     baseImg.src = BASE_COMPRESS;
 
     setTimeout(() => {
+       
+    
         retractIndenter();
+        
     }, holdTime * 1000);
 }
 
@@ -217,4 +226,251 @@ function showConclusion() {
 }
 function closeConclusion() {
     document.getElementById("conclusionModal").style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showMaterialOptions() {
+    document.getElementById("materialOptions").style.display = "block";
+
+    // Show nanoindentation button immediately (no selection needed)
+    document.getElementById("performIndentBtn").style.display = "block";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// show popup when page loads
+window.onload = function() {
+    document.getElementById("startupOverlay").style.display = "flex";
+};
+
+// handle submit
+function submitLike() {
+    const selected = document.querySelector('input[name="like"]:checked');
+
+    if (!selected) {
+        alert("Please select Yes or No.");
+        return;
+    }
+
+    if (selected.value === "yes") {
+        // Close popup
+        document.getElementById("startupOverlay").style.display = "none";
+    } else {
+        // Open Google in new tab
+        window.open("https://virtual-labs.github.io/exp-nanoindentation-measurement-iitk/", "_blank");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   GRAPH ENGINE — SELF-CONTAINED, EXTRACTED & CLEANED
+   ============================================================ */
+
+let canvas, ctx;
+
+const origin = { x: 40, y: 190 };
+const gWidth = 160;
+const gHeight = 140;
+
+let hmax = gWidth * 0.75;
+let Pmax = gHeight * 0.85;
+let hf   = gWidth * 0.18;
+
+let animPhase = "idle";
+let animT = 0;
+let holdStartTime = null;
+let holdLength = 0;
+
+
+function initGraph() {
+    canvas = document.getElementById("miniGraph");
+    if (!canvas) return;
+
+    ctx = canvas.getContext("2d");
+    drawBaseGraph();
+}
+
+function drawBaseGraph() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 1.5;
+
+    // X axis
+    ctx.beginPath();
+    ctx.moveTo(origin.x, origin.y);
+    ctx.lineTo(origin.x + gWidth, origin.y);
+    ctx.stroke();
+
+    // Y axis
+    ctx.beginPath();
+    ctx.moveTo(origin.x, origin.y);
+    ctx.lineTo(origin.x, origin.y - gHeight);
+    ctx.stroke();
+
+    ctx.font = "10px Segoe UI";
+    ctx.fillStyle = "#000";
+    ctx.fillText("Displacement (h)", origin.x + 30, origin.y + 20);
+
+    ctx.save();
+    ctx.translate(origin.x - 25, origin.y - 70);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText("Load (P)", 0, 0);
+    ctx.restore();
+
+    ctx.fillText(`Load = ${appliedForce} mN | Hold = ${holdTime}s`,
+        origin.x - 5, origin.y + 35
+    );
+}
+
+function animateIndentationCurve() {
+    drawBaseGraph();
+
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+
+    const loadExp = 2.0;
+    const unloadExp = 1.5;
+
+    /* =============== LOADING =============== */
+    if (animPhase === "loading") {
+        animT += 0.010;
+
+        for (let i = 0; i <= animT * 100; i++) {
+            const t = i / 100;
+            const h = hmax * t;
+            const P = Pmax * Math.pow(t, loadExp);
+            ctx.lineTo(origin.x + h, origin.y - P);
+        }
+
+        ctx.stroke();
+
+        if (animT < 1) {
+            requestAnimationFrame(animateIndentationCurve);
+        } else {
+            animPhase = "holding";
+            holdStartTime = performance.now();
+            requestAnimationFrame(animateIndentationCurve);
+        }
+        return;
+    }
+
+    /* =============== HOLDING =============== */
+    if (animPhase === "holding") {
+        for (let i = 0; i <= 100; i++) {
+            const t = i / 100;
+            ctx.lineTo(origin.x + hmax * t,
+                        origin.y - Pmax * Math.pow(t, loadExp));
+        }
+
+        ctx.lineTo(origin.x + hmax + holdLength, origin.y - Pmax);
+        ctx.stroke();
+
+        if (performance.now() - holdStartTime < holdTime * 1000) {
+            requestAnimationFrame(animateIndentationCurve);
+        } else {
+            startUnloading();
+        }
+        return;
+    }
+
+    /* =============== UNLOADING =============== */
+    if (animPhase === "unloading") {
+        animT += 0.015;
+
+        // loading curve
+        for (let i = 0; i <= 100; i++) {
+            const t = i / 100;
+            ctx.lineTo(origin.x + hmax * t,
+                        origin.y - Pmax * Math.pow(t, loadExp));
+        }
+
+        // hold plateau
+        ctx.lineTo(origin.x + hmax + holdLength, origin.y - Pmax);
+
+        // unloading curve
+        for (let i = 0; i <= animT * 100; i++) {
+            const t = i / 100;
+            const h = (1 - t) * hmax + t * hf;
+            const P = Pmax * Math.pow((h - hf) / (hmax - hf), unloadExp);
+            ctx.lineTo(origin.x + h + holdLength, origin.y - P);
+        }
+
+        ctx.stroke();
+
+        if (animT < 1) requestAnimationFrame(animateIndentationCurve);
+    }
+}
+
+function startUnloading() {
+    animPhase = "unloading";
+    animT = 0;
+
+    requestAnimationFrame(animateIndentationCurve);
+}
+
+/* ============================================================
+   START GRAPH WHEN POINTER TOUCHES SAMPLE
+   ============================================================ */
+
+function startGraphEngineAtContact() {
+    animPhase = "loading";
+    animT = 0;
+    holdLength = Math.min(holdTime * 8, gWidth * 0.2);
+    requestAnimationFrame(animateIndentationCurve);
 }

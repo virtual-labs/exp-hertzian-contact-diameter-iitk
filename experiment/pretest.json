@@ -10,13 +10,13 @@
         "d": "Viscous"
       },
       "explanations": {
-        "a": "Incorrect: Hertzian theory does not describe plastic deformation.",
-        "b": "Correct: Hertzian theory assumes purely elastic, fully recoverable deformation.",
-        "c": "Incorrect: Creep is time-dependent deformation, not assumed in Hertzian theory.",
-        "d": "Incorrect: Viscous deformation is not considered in Hertzian elastic contact."
+        "a": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage.",
+        "b": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage.",
+        "c": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage.",
+        "d": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage."
       },
       "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": ""
     },
     {
       "question": "The contact area between an indenter and a surface increases with:",
@@ -27,13 +27,13 @@
         "d": "Lower indenter radius"
       },
       "explanations": {
-        "a": "Incorrect: Lower load reduces penetration and contact area.",
-        "b": "Incorrect: Higher modulus reduces deformation, often decreasing contact area.",
-        "c": "Correct: Increasing load pushes the indenter deeper, increasing the contact radius and area.",
-        "d": "Incorrect: A smaller indenter radius produces smaller contact area for the same load."
+        "a": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area.",
+        "b": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area.",
+        "c": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area.",
+        "d": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": ""
     },
     {
       "question": "In Hertzian contact, the maximum shear stress occurs:",
@@ -44,13 +44,13 @@
         "d": "Uniformly everywhere"
       },
       "explanations": {
-        "a": "Incorrect: Stresses are not maximum at the edge.",
-        "b": "Incorrect: Normal stress is highest at the center, but shear stress is not.",
-        "c": "Correct: Peak shear stress occurs slightly below the surface, often initiating subsurface cracks or yielding.",
-        "d": "Incorrect: Stress distribution is highly non-uniform in contact mechanics."
+        "a": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking.",
+        "b": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking.",
+        "c": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking.",
+        "d": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": ""
     },
     {
       "question": "If the contact radius becomes smaller for the same load, the contact pressure will:",
@@ -61,13 +61,14 @@
         "d": "Become zero"
       },
       "explanations": {
-        "a": "Incorrect: Smaller area does not reduce pressure.",
-        "b": "Correct: Pressure = Load / Area. Smaller area increases contact stress.",
-        "c": "Incorrect: Pressure depends on area and will change.",
-        "d": "Incorrect: Pressure cannot be zero under applied load."
+        "a": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress.",
+        "b": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress.",
+        "c": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress.",
+        "d": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress."
       },
       "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": ""
     }
   ]
 }
+
