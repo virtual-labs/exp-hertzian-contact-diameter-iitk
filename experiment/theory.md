@@ -44,6 +44,8 @@ a = (3PR / 4E*)<sup>1/3</sup>
 
 Where P = applied load, R = indenter tip radius.
 
+This relation indicates that the contact radius (a) increases with an increase in load P and radius R. While “a” decreases with stiffness E*. Thus, a softer material or larger tip spreads the load over a bigger area.
+
 ---
 
 #### Elastic Approach (Indentation Depth–Load Relation)
@@ -56,7 +58,7 @@ P = (4/3) E* √R · h<sup>3/2</sup>
 
 #### Mean Contact Pressure
 p<sub>m</sub> = P / A  
-Where A = πa².
+This is the average stress acting over the contact area A = πa².
 
 ---
 
@@ -66,20 +68,19 @@ p<sub>0</sub> = 3P / (2πa²) = 1.5 p<sub>m</sub>
 ---
 
 #### Pressure Distribution
-p(r) = p<sub>0</sub> √(1 − r² / a²)
+p(r) = p<sub>0</sub> (1 − r² / a²)<sup>1/2</sup>
 
 Where r is radial distance from center.
 
-This explains why p(r) is maximum at r = 0, zero at r = a, and varies parabolically.
+This equation explains why p(r) is maximum at r=0, zero at r=a and varies parabolically with r/a and thus it also explains why damage nucleates near the center.
 
 ---
 
 #### Subsurface Shear Stress (Yield Criterion)
 τ<sub>max</sub> ≈ 0.31 p<sub>0</sub>
 
-Maximum shear stress occurs at roughly 0.5a below the surface.
+Maximum shear stress occurs at ~0.5a below the surface. Plastic deformation begins when this exceeds shear yield strength.
 
-Plastic deformation begins when this exceeds shear yield strength.
 
 ---
 
@@ -88,7 +89,7 @@ Together, these equations show that contact mechanics is fundamentally a balance
 ---
 
 #### Figure 1
-The indenter tip is considered to be spherical and low loads are applied so as to have elastic deformation (or minimal plastic deformation) of a material to evaluate contact pressure using Hertzian theory.
+The indenter tip is considered to be the spherical and low loads are applied so as to have elastic deformation (or a minimal plastic deformation) of a material to evaluate contact pressure using Hertzian theory.
 <img src="images/Picture1.png" width="500">
 
 
