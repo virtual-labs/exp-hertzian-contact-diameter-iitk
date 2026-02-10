@@ -10,10 +10,10 @@
         "d": "Become zero"
       },
       "explanations": {
-        "a": "Incorrect: Increasing load increases stress, not decreases it.",
-        "b": "Incorrect: Pressure changes with load and area.",
-        "c": "Correct: Higher load produces higher stresses, increasing both mean and maximum contact pressure.",
-        "d": "Incorrect: Pressure cannot become zero under load."
+        "a": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures.",
+        "b": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures..",
+        "c": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures.",
+        "d": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -27,10 +27,10 @@
         "d": "Thermal expansion"
       },
       "explanations": {
-        "a": "Incorrect: Density is not related to Hertzian mechanics.",
-        "b": "Incorrect: Grain size is a microstructural property unrelated to contact stress calculations.",
-        "c": "Correct: Hertzian analysis helps predict yielding, cracking, and wear due to localized stress.",
-        "d": "Incorrect: Hertzian theory does not address thermal expansion."
+        "a": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions.",
+        "b": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions.",
+        "c": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions.",
+        "d": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -44,10 +44,10 @@
         "d": "Temperature"
       },
       "explanations": {
-        "a": "Incorrect: Hardness does not define the geometric contact area in Hertzian theory.",
-        "b": "Correct: Projected area A = πa², which depends directly on the contact radius.",
-        "c": "Incorrect: Holding time does not affect Hertzian contact geometry.",
-        "d": "Incorrect: Contact area does not directly depend on temperature in elastic theory."
+        "a": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius.",
+        "b": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius.",
+        "c": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius.",
+        "d": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -61,10 +61,10 @@
         "d": "Surface polishing only"
       },
       "explanations": {
-        "a": "Incorrect: High pressure often exceeds yield strength, causing plasticity.",
-        "b": "Incorrect: High stresses always produce deformation.",
-        "c": "Correct: When stress exceeds yield strength, permanent deformation occurs, resulting in plastic flow and wear.",
-        "d": "Incorrect: Surface polishing is not the dominant mechanism under high stress."
+        "a": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage.",
+        "b": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage.",
+        "c": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage.",
+        "d": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
