@@ -44,6 +44,8 @@ a = (3PR / 4E*)<sup>1/3</sup>
 
 Where P = applied load, R = indenter tip radius.
 
+This relation indicates that the contact radius (a) increases with an increase in load P and radius R. While “a” decreases with stiffness E*. Thus, a softer material or larger tip spreads the load over a bigger area.
+
 ---
 
 #### Elastic Approach (Indentation Depth–Load Relation)
