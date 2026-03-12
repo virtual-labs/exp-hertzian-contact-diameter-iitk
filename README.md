@@ -4,7 +4,7 @@
 <b>Discipline | <b>Mechanical Engineering
 :--|:--|
 <b> Lab | <b> Wear and Tribology Lab
-<b> Experiment|     <b>stimation of Hertzian Contact Pressure
+<b> Experiment|     <b>Estimation of Hertzian Contact Pressure
 
 ### About the Experiment 
 
