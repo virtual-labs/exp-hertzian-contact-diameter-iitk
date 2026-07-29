@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "If the applied load is doubled in an elastic contact, the contact pressure will generally:",
+      "answers": {
+        "a": "Decrease",
+        "b": "Remain constant",
+        "c": "Increase",
+        "d": "Become zero"
+      },
+      "explanations": {
+        "a": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures.",
+        "b": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures..",
+        "c": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures.",
+        "d": "A higher load produces larger stresses in the contact zone, increasing both mean and maximum pressures."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Hertzian contact pressure analysis is mainly useful for predicting:",
+      "answers": {
+        "a": "Density",
+        "b": "Grain size",
+        "c": "Contact-induced damage",
+        "d": "Thermal expansion"
+      },
+      "explanations": {
+        "a": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions.",
+        "b": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions.",
+        "c": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions.",
+        "d": "Localized contact stresses determine when yielding, cracking, or wear begins, making Hertzian analysis useful for tribological predictions."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The projected contact area in Hertzian contact is directly determined by:",
+      "answers": {
+        "a": "Hardness",
+        "b": "Contact radius",
+        "c": "Holding time",
+        "d": "Temperature"
+      },
+      "explanations": {
+        "a": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius.",
+        "b": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius.",
+        "c": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius.",
+        "d": "The contact area is calculated as A=πa^2, so it depends directly on the contact radius."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Very high contact pressure during sliding or indentation typically leads to:",
+      "answers": {
+        "a": "Purely elastic recovery",
+        "b": "No deformation",
+        "c": "Plastic flow and wear",
+        "d": "Surface polishing only"
+      },
+      "explanations": {
+        "a": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage.",
+        "b": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage.",
+        "c": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage.",
+        "d": "When stresses exceed the yield strength, permanent deformation and material removal occur, resulting in wear damage."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}

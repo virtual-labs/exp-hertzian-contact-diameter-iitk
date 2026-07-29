@@ -1,0 +1,74 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Hertzian contact theory assumes the deformation during contact is:",
+      "answers": {
+        "a": "Plastic",
+        "b": "Elastic",
+        "c": "Creep",
+        "d": "Viscous"
+      },
+      "explanations": {
+        "a": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage.",
+        "b": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage.",
+        "c": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage.",
+        "d": "Hertzian theory is derived using linear elastic mechanics and assumes all deformation is recoverable with no permanent plastic damage."
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "The contact area between an indenter and a surface increases with:",
+      "answers": {
+        "a": "Lower load",
+        "b": "Higher modulus",
+        "c": "Higher load",
+        "d": "Lower indenter radius"
+      },
+      "explanations": {
+        "a": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area.",
+        "b": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area.",
+        "c": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area.",
+        "d": "Increasing load pushes the indenter deeper into the surface, enlarging the contact radius and therefore increasing the projected contact area."
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "In Hertzian contact, the maximum shear stress occurs:",
+      "answers": {
+        "a": "At the edge of contact",
+        "b": "At the center of contact",
+        "c": "Below the surface",
+        "d": "Uniformly everywhere"
+      },
+      "explanations": {
+        "a": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking.",
+        "b": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking.",
+        "c": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking.",
+        "d": "Stress analysis shows that peak shear stress develops slightly beneath the surface, which often initiates subsurface yielding or cracking."
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "If the contact radius becomes smaller for the same load, the contact pressure will:",
+      "answers": {
+        "a": "Decrease",
+        "b": "Increase",
+        "c": "Remain constant",
+        "d": "Become zero"
+      },
+      "explanations": {
+        "a": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress.",
+        "b": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress.",
+        "c": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress.",
+        "d": "Pressure equals load divided by area; a smaller area concentrates the same force, producing higher contact stress."
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    }
+  ]
+}
+
